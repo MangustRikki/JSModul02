@@ -1,0 +1,57 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: wheat;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    
+    .wrap {
+        max-width: 780px;
+        margin: 10px auto;
+        padding: 10px;
+        text-align: center;
+        background: lightblue;
+        box-shadow: 3px 3px 3px 1px darkblue;
+    }
+    
+    .wrapTask {
+        margin-bottom: 20px;
+    }
+    
+    .task {
+        text-align: left;
+        color: #010404;
+        font-size: 30px;
+        line-height: 45px;
+    }
+    
+    .caption,
+    .textRes {
+        color: lightseagreen;
+        font-size: 30px;
+        line-height: 45px;
+    }
+    
+    .textRes {
+        height: 45px;
+    }
+    
+    .age {
+        color: lightseagreen;
+        height: 20px;
+    }
+    
+    .button {
+        width: 100px;
+        height: 24px;
+        border-radius: 3px;
+        background: lightseagreen;
+        border: 2px solid seagreen;
+    }
+    
+    .textRes {
+        text-align: center;
+    }
