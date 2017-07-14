@@ -10,8 +10,6 @@ submitTaskOne.addEventListener('click', goTaskOne);
 
 let resTaskOne = document.querySelector('.textRes--taskOne');
 
-const options = { year: '' }
-
 function goTaskOne(e) {
     e.preventDefault();
     let birthday = document.querySelector('.age').value;
@@ -22,7 +20,12 @@ function goTaskOne(e) {
 
 function getAge(birthYear, todayYear) {
     let yourAge = todayYear - birthYear;
-    resTaskOne.textContent = "Вам исполнилось " + yourAge.toLocaleString('Uk-uk', options) + " лет";
+    if (0 >= yourAge || yourAge > 100) {
+        resTaskOne.textContent = "Что-то вы не то ввели";
+        let birthday = document.querySelector('.age').value = "";
+    } else {
+        resTaskOne.textContent = "Вам исполнилось " + yourAge.toLocaleString('Uk-uk', options) + " лет";
+    }
 }
 
 // Task 2
