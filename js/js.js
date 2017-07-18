@@ -22,9 +22,8 @@ function getAge(birthYear, todayYear) {
     let yourAge = todayYear - birthYear;
     if (0 >= yourAge || yourAge > 100) {
         resTaskOne.textContent = "Что-то вы не то ввели";
-        let birthday = document.querySelector('.age').value = "";
     } else {
-        resTaskOne.textContent = "Вам исполнилось " + yourAge.toLocaleString('Uk-uk', options) + " лет";
+        resTaskOne.textContent = "Вам исполнилось " + yourAge + " лет";
     }
 }
 
@@ -156,13 +155,83 @@ for (let i = 200; i >= 0; i--) {
 }
 
 //Task 3 
-sumN = 0;
+let sumN = 0;
 
 function summary(sum) {
     for (var i = 0; i <= 100; i++) {
-        sum = sum + i;
+        sum += i;
     }
     console.log(sum);
 }
 
 summary(sumN);
+
+// Циклы задача 4
+
+const numForExponent = document.querySelector('.numForExponent');
+const exponent = document.querySelector('.exponent');
+const resLoopsFour = document.querySelector('.textRes--loopsFour');
+
+const submitLoopsFour = document.querySelector('.button--loopsFour');
+submitLoopsFour.addEventListener('click', goLoopsFour);
+
+function goLoopsFour(e) {
+    e.preventDefault();
+    resLoopsFour.textContent = getExponent(numForExponent.value, exponent.value);
+}
+
+function getExponent(num, exp) {
+    let tmp = num;
+    for (let i = 1; i < exp; i++) {
+        tmp *= num;
+    }
+    return num + " в степени " + exp + " равно " + tmp;
+}
+
+// Циклы задача 5
+
+for (let i = 1; i <= 9; i++) {
+    console.log(7 * i);
+}
+
+// Циклы задача 5.1
+
+let numForMult = 7;
+
+function mult(someNum) {
+    for (let i = 1; i < 10; i++) {
+        console.log(someNum * i);
+    }
+}
+
+mult(numForMult);
+
+// Циклы 5.2 
+
+let number = 1;
+let quantity = 50;
+
+function summation(number, quantity) {
+    for (var i = 1; i <= quantity; i++) {
+        number *= i;
+    }
+    return number;
+}
+
+console.log(summation(number, quantity));
+
+// Циклы 5.3
+
+let symbols = document.querySelector('.symbols');
+
+
+let beginSymb = 1000;
+let endSymb = 2000;
+
+function symbolsFunction(begin, end) {
+    for (let i = begin; i <= end; i++) {
+        symbols.innerHTML += "&#" + i + ";" + " ";
+    }
+}
+
+symbolsFunction(beginSymb, endSymb);
